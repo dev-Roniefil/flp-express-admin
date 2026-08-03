@@ -4,7 +4,7 @@
     <main class="admin-main2">
         <div class="page-header">
             <h1>Categories Management</h1>
-            <NuxtLink to="/admin/products" class="back-btn">← Back to Products</NuxtLink>
+            <NuxtLink to="/products" class="back-btn">← Back to Products</NuxtLink>
         </div>
 
         <div class="content-grid">

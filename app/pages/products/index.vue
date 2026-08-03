@@ -4,7 +4,7 @@
       <h1>Products</h1>
       <div class="actions">
         <button class="export-btn">Export</button>
-        <NuxtLink to="/admin/products/create" class="add-btn">
+        <NuxtLink to="/products/create" class="add-btn">
           + Add New Product
         </NuxtLink>
       </div>
@@ -260,7 +260,7 @@ const loadProducts = async () => {
 }
 
 const editProduct = (id: number) => {
-  navigateTo(`/admin/products/edit/${id}`)
+  navigateTo(`/products/edit/${id}`)
 }
 
 

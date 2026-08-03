@@ -35,7 +35,8 @@ export default defineNuxtConfig({
           defer: true
         }
       ],
-    }
+    },
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
   },
 
   router: {

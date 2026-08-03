@@ -344,7 +344,7 @@ const saveProduct = async () => {
 
     showToast('✅ Product published successfully!', 'success')
     resetForm()
-    navigateTo('/admin/products')
+    navigateTo('/products')
   } catch (error: any) {
     console.error(error)
     showToast(error.data?.message || 'Failed to save product', 'error')

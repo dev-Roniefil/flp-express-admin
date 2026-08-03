@@ -229,7 +229,7 @@ const formatDate = (date: string) => {
 }
 
 const viewOrder = (id: number) => {
-  navigateTo(`/admin/orders/${id}`)
+  navigateTo(`/orders/${id}`)
 }
 
 const nextPage = () => {

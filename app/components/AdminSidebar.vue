@@ -12,28 +12,28 @@
         <NuxtLink to="/admin" class="nav-item">
             <span class="icon">📊</span> Dashboard
         </NuxtLink>
-        <NuxtLink to="/admin/orders" class="nav-item">
+        <NuxtLink to="/orders" class="nav-item">
             <span class="icon">📦</span> Orders
         </NuxtLink>
-        <NuxtLink to="/admin/products" class="nav-item has-submenu">
+        <NuxtLink to="/products" class="nav-item has-submenu">
             <span class="icon">🛍️</span> Products
             <div class="submenu">
-                <NuxtLink to="/admin/products">All Products</NuxtLink>
-                <NuxtLink to="/admin/products/create">Add New Product</NuxtLink>
-                <NuxtLink to="/admin/products/categories">Categories</NuxtLink>
-                <!-- <NuxtLink to="/admin/packages" class="submenu-item">Packages</NuxtLink> -->
-                <NuxtLink to="/admin/package-categories" class="submenu-item">Package Categories</NuxtLink>
-                <NuxtLink to="/admin/products/attributes">Attributes</NuxtLink>
+                <NuxtLink to="/products">All Products</NuxtLink>
+                <NuxtLink to="/products/create">Add New Product</NuxtLink>
+                <NuxtLink to="/products/categories">Categories</NuxtLink>
+                <!-- <NuxtLink to="/packages" class="submenu-item">Packages</NuxtLink> -->
+                <NuxtLink to="/package-categories" class="submenu-item">Package Categories</NuxtLink>
+                <NuxtLink to="/products/attributes">Attributes</NuxtLink>
             </div>
         </NuxtLink>
-        <NuxtLink to="/admin/users" class="nav-item">
+        <NuxtLink to="/users" class="nav-item">
           <span class="icon">👤</span>
           <span v-if="!isCollapsed">Users</span>
         </NuxtLink>
-        <NuxtLink to="/admin/customers" class="nav-item">
+        <NuxtLink to="/customers" class="nav-item">
             <span class="icon">👥</span> Customers
         </NuxtLink>
-        <NuxtLink to="/admin/settings" class="nav-item">
+        <NuxtLink to="/settings" class="nav-item">
             <span class="icon">⚙️</span> Settings
         </NuxtLink>
     </nav>

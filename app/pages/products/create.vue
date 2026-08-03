@@ -4,6 +4,9 @@
       <h1>Add New Product</h1>
       <div class="header-actions">
         <button class="btn-secondary" @click="$router.back()">Cancel</button>
+        <NuxtLink to="/products" class="btn-secondary">
+          Cancel
+        </NuxtLink>
         <!-- <button class="btn-primary" @click="saveProduct">Publish Product</button> -->
         <button class="btn-primary" :disabled="isSaving" @click="saveProduct">
           {{ isSaving ? 'Publishing...' : 'Publish Product' }}

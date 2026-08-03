@@ -120,7 +120,7 @@ const loadSettings = async () => {
     const msg = e?.data?.message || 'Not allowed. Please contact admin support.'
     showToast(msg, 'error')
     if (e?.status === 403) {
-      router.push('/admin')
+      router.push('/')
     }
   }
 }
@@ -153,7 +153,7 @@ onMounted(() => {
       const role = user.role || ''
       if (!['admin', 'super_admin', 'administrator'].includes(role)) {
         showToast('Not allowed. Please contact admin support.', 'error')
-        router.push('/admin')
+        router.push('/')
         return
       }
     } catch (_) {

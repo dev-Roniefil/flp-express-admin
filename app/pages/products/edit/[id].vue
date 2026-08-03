@@ -306,7 +306,7 @@ const updateProduct = async () => {
     })
 
     showToast('✅ Product updated successfully!', 'success')
-    navigateTo('/admin/products')
+    navigateTo('/products')
   } catch (error) {
     console.error(error)
     showToast('Failed to update product', 'error')

@@ -3,7 +3,7 @@
     <div class="page-header">
       <h1>Add New Product</h1>
       <div class="header-actions">
-        <button class="btn-secondary" @click="$router.back()">Cancel</button>
+        <!-- <button class="btn-secondary" @click="$router.back()">Cancel</button> -->
         <NuxtLink to="/products" class="btn-secondary">
           Cancel
         </NuxtLink>

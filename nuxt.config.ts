@@ -10,13 +10,14 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBase: 'http://localhost:8000/api',   // Change when deploying
-      imageBase: 'http://localhost:8000'
+      imageBase: 'http://localhost:8000',
+      baseURL: '/admin/',
     }
   },
 
   css: [
       'bootstrap/dist/css/bootstrap.min.css',
-      '~/assets/css/main.css'
+      '@/assets/css/main.css'
       
       // 'sonner/dist/index.css'
     ],

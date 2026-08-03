@@ -9,7 +9,7 @@
     </div>
 
     <nav class="sidebar-nav">
-        <NuxtLink to="/admin" class="nav-item">
+        <NuxtLink to="/" class="nav-item">
             <span class="icon">📊</span> Dashboard
         </NuxtLink>
         <NuxtLink to="/orders" class="nav-item">

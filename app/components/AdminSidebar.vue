@@ -2,7 +2,7 @@
   <aside class="admin-sidebar" :class="{ collapsed: isCollapsed }">
     <div class="logo">
         <img 
-            src="/Images/FLP-Express-Transparent.PNG" 
+            src="/Images/FLP-Express-Transparent.png" 
             alt="FLP Admin" 
             class="admin-logo"
         >
@@ -246,7 +246,7 @@ const logout = () => {
 }
 
 .btn-logout {
-  background: #ef4444;
+  background: #F49322;
   color: white;
   border: none;
 }

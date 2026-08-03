@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     public: {
       apiBase: 'http://localhost:8000/api',   // Change when deploying
       imageBase: 'http://localhost:8000',
-      baseURL: '/admin/',
+      // baseURL: '/admin/',
     }
   },
 

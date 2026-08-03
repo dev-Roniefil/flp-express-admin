@@ -8,6 +8,6 @@ export default defineNuxtRouteMiddleware((to) => {
   }
 
   if (!token.value) {
-    return navigateTo('/admin/login', { external: true })
+    return navigateTo('/login', { external: true })
   }
 })

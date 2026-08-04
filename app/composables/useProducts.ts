@@ -31,10 +31,14 @@ export const useProducts = () => {
   }
 
   const updateProduct = async (id: number, productData: any) => {
+    const isForm = productData instanceof FormData
     return await $fetch(`${API_BASE}/products/${id}`, {
-      method: 'PUT',
+      method: isForm ? 'POST' : 'PUT', // FormData + _method=PUT
       body: productData,
-      headers: authHeaders()
+      headers: {
+        ...authHeaders(),
+        Accept: 'application/json',
+      },
     })
   }
 

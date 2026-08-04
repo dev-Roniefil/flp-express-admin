@@ -23,7 +23,7 @@
                 <NuxtLink to="/admin/products/categories">Categories</NuxtLink>
                 <!-- <NuxtLink to="/packages" class="submenu-item">Packages</NuxtLink> -->
                 <NuxtLink to="/admin/package-categories" class="submenu-item">Package Categories</NuxtLink>
-                <NuxtLink to="/admin/products/attributes">Attributes</NuxtLink>
+                <!-- <NuxtLink to="/admin/products/attributes">Attributes</NuxtLink> -->
             </div>
         </NuxtLink>
         <NuxtLink to="/admin/users" class="nav-item">

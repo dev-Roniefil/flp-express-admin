@@ -270,6 +270,7 @@ const uploadOptionImage = async (vIndex: number, oIndex: number, e: Event) => {
   }
 }
 
+const { updateProduct: apiUpdateProduct } = useProducts()
 const updateProduct = async () => {
   if (!product.value.name?.trim()) {
     showToast('Product name is required', 'error')
@@ -299,14 +300,19 @@ const updateProduct = async () => {
       formData.append('image', imageFile.value)
     }
 
-    const response = await $fetch(`/products/${productId}`, {
-      baseURL: config.public.apiBase,
-      method: 'PUT',
-      body: formData,
-    })
+    // Laravel often needs POST + _method for FormData updates
+    formData.append('_method', 'PUT')
+
+    await apiUpdateProduct(Number(productId), formData)
+
+    // const response = await $fetch(`/products/${productId}`, {
+    //   baseURL: config.public.apiBase,
+    //   method: 'PUT',
+    //   body: formData,
+    // })
 
     showToast('✅ Product updated successfully!', 'success')
-    navigateTo('/products')
+    navigateTo('/admin/products')
   } catch (error) {
     console.error(error)
     showToast('Failed to update product', 'error')

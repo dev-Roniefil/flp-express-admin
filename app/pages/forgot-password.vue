@@ -23,7 +23,7 @@
             {{ isLoading ? 'Sending...' : 'Send Reset Link' }}
           </button>
 
-          <NuxtLink to="/login" class="back-link">← Back to Sign in</NuxtLink>
+          <NuxtLink to="/admin/login" class="back-link">← Back to Sign in</NuxtLink>
         </form>
 
         <div v-else class="success-box">

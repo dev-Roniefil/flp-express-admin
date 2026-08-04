@@ -110,10 +110,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  middleware: 'auth'
-})
-
 const config = useRuntimeConfig()
 
 const { getOrders, deleteOrder: apiDeleteOrder } = useOrders()
@@ -229,7 +225,7 @@ const formatDate = (date: string) => {
 }
 
 const viewOrder = (id: number) => {
-  navigateTo(`/orders/${id}`)
+  navigateTo(`/admin/orders/${id}`)
 }
 
 const nextPage = () => {

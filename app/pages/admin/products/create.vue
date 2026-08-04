@@ -4,7 +4,7 @@
       <h1>Add New Product</h1>
       <div class="header-actions">
         <!-- <button class="btn-secondary" @click="$router.back()">Cancel</button> -->
-        <NuxtLink to="/products" class="btn-secondary">
+        <NuxtLink to="/admin/products" class="btn-secondary">
           Cancel
         </NuxtLink>
         <!-- <button class="btn-primary" @click="saveProduct">Publish Product</button> -->
@@ -347,7 +347,7 @@ const saveProduct = async () => {
 
     showToast('✅ Product published successfully!', 'success')
     resetForm()
-    navigateTo('/products')
+    navigateTo('/admin/products')
   } catch (error: any) {
     console.error(error)
     showToast(error.data?.message || 'Failed to save product', 'error')

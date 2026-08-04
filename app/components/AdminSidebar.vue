@@ -9,31 +9,31 @@
     </div>
 
     <nav class="sidebar-nav">
-        <NuxtLink to="/" class="nav-item">
+        <NuxtLink to="/admin" class="nav-item">
             <span class="icon">📊</span> Dashboard
         </NuxtLink>
-        <NuxtLink to="/orders" class="nav-item">
+        <NuxtLink to="/admin/orders" class="nav-item">
             <span class="icon">📦</span> Orders
         </NuxtLink>
-        <NuxtLink to="/products" class="nav-item has-submenu">
+        <NuxtLink to="/admin/products" class="nav-item has-submenu">
             <span class="icon">🛍️</span> Products
             <div class="submenu">
-                <NuxtLink to="/products">All Products</NuxtLink>
-                <NuxtLink to="/products/create">Add New Product</NuxtLink>
-                <NuxtLink to="/products/categories">Categories</NuxtLink>
+                <NuxtLink to="/admin/products">All Products</NuxtLink>
+                <NuxtLink to="/admin/products/create">Add New Product</NuxtLink>
+                <NuxtLink to="/admin/products/categories">Categories</NuxtLink>
                 <!-- <NuxtLink to="/packages" class="submenu-item">Packages</NuxtLink> -->
-                <NuxtLink to="/package-categories" class="submenu-item">Package Categories</NuxtLink>
-                <NuxtLink to="/products/attributes">Attributes</NuxtLink>
+                <NuxtLink to="/admin/package-categories" class="submenu-item">Package Categories</NuxtLink>
+                <NuxtLink to="/admin/products/attributes">Attributes</NuxtLink>
             </div>
         </NuxtLink>
-        <NuxtLink to="/users" class="nav-item">
+        <NuxtLink to="/admin/users" class="nav-item">
           <span class="icon">👤</span>
           <span v-if="!isCollapsed">Users</span>
         </NuxtLink>
-        <NuxtLink to="/customers" class="nav-item">
+        <NuxtLink to="/admin/customers" class="nav-item">
             <span class="icon">👥</span> Customers
         </NuxtLink>
-        <NuxtLink to="/settings" class="nav-item">
+        <NuxtLink to="/admin/settings" class="nav-item">
             <span class="icon">⚙️</span> Settings
         </NuxtLink>
     </nav>
@@ -80,14 +80,16 @@ const showLogoutConfirm = () => {
 }
 
 const logout = () => {
-  // if (confirm('Logout from admin panel?')) {
-    const tokenCookie = useCookie('auth_token')
-    tokenCookie.value = null
+  const tokenCookie = useCookie('auth_token')
+  tokenCookie.value = null
+
+  if (import.meta.client) {
     localStorage.removeItem('token')
     localStorage.removeItem('user')
-    navigateTo('/login')
-    showLogoutModal.value = false
-  // }
+  }
+
+  showLogoutModal.value = false
+  navigateTo('/admin/login')
 }
 </script>
 

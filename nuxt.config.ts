@@ -9,8 +9,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: 'http://localhost:8000/api',   // Change when deploying
-      imageBase: 'http://localhost:8000',
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:8000/api',
+      imageBase: process.env.NUXT_PUBLIC_IMAGE_BASE || 'http://localhost:8000',
       // baseURL: '/admin/',
     }
   },
@@ -22,6 +22,7 @@ export default defineNuxtConfig({
       // 'sonner/dist/index.css'
     ],
   app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
       title: 'FLP Express Admin',
       link: [
@@ -36,7 +37,6 @@ export default defineNuxtConfig({
         }
       ],
     },
-    baseURL: process.env.NUXT_APP_BASE_URL || '/',
   },
 
   router: {

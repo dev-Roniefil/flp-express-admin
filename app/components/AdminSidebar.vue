@@ -62,6 +62,8 @@
         <button class="btn-logout" @click="logout">Yes, Logout</button>
       </div>
     </div>
+    <br>
+    <p>v1.1</p>
   </div>
 
 </template>

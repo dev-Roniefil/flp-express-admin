@@ -43,6 +43,14 @@ export default defineNuxtConfig({
     options: {
       strict: true
     }
+  },
+
+  experimental: {
+    defaults: {
+      nuxtLink: {
+        trailingSlash: 'remove'  // not false
+      }
+    }
   }
 
 })

@@ -44,6 +44,9 @@
         <span class="icon">🚪</span>
         <span v-if="!isCollapsed">Logout</span>
       </button>
+
+      <br>
+      <p class="text-center" style="color: gray;">v1.1</p>
     </div>
 
     <!-- Toggle Button -->
